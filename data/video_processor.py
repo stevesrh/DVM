@@ -1,6 +1,8 @@
 import cv2, imutils
 import glob, os
 import random, math
+
+import numpy
 import numpy as np
 import ntpath
 from multiprocessing import Pool
