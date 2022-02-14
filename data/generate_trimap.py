@@ -2,7 +2,7 @@ import cv2
 import numpy as np
 
 
-def gen_trimap(alpha, ksize=3, iteration=5):
+def gen_trimap(alpha, ksize=7, iteration=10):
     kernel = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (ksize, ksize))
     dilated = cv2.dilate(alpha, kernel, iterations=iteration)
     eroded = cv2.erode(alpha, kernel, iterations=iteration)
